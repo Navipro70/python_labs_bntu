@@ -1,3 +1,9 @@
+# This program is first lab in BNTU, designed to show basic capabilities of python with GUI.
+# Version 1.0
+# Full name: Matatov Dmitry Valer'evich, ФИО: Мататов Дмитрий Валерьевич
+# Group number: № 10702120
+# Date of development: 13 september, 2020
+
 from tkinter import *  # Import all func and objects from GUI lib (tkinter)
 from tkinter import messagebox  # import messagebox (object, class, file :?) I don't know
 import time  # import time lib
