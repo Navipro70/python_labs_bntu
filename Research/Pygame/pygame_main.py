@@ -3,6 +3,8 @@ from pygame.locals import *
 from Research.Pygame.consts import *
 from Research.Pygame.keyboard_navigation import keyboard_navigation, choose_way
 from Research.Pygame.utils import rockets_creator
+
+
 # TODO Rewrite all for OOP
 # TODO Research for python package managers
 pygame.init()
@@ -17,6 +19,7 @@ speed = 1
 reverted = False
 rockets = []
 motion = K_LEFT
+
 while True:
     playground.fill(BLACK)  # After every FPS tick, redraw background to black
     pygame.time.delay(FPS)  # FPS imitation
@@ -36,6 +39,13 @@ while True:
     x, y, motion = keyboard_navigation(x, y, speed, motion)
     # Make static moving for main obj
     x, y, motion = choose_way(x, y, speed, motion)
-    if x == 0 + r or y == 0 + r:
+    # Checking borders
+    if x <= 0 - r:
+        x = DISPLAY_SIZE
+    elif x >= DISPLAY_SIZE + r:
+        x = 0
+    elif y <= 0 - r:
+        y = DISPLAY_SIZE
+    elif y >= DISPLAY_SIZE + r:
+        y = 0
 
-        exit()

@@ -4,20 +4,23 @@
 # Group number: № 10702120
 # Date of development: 13 september, 2020
 
-print('\n\n"Безнадёжно — это когда на крышку гроба падает земля. Остальное можно исправить. — Джейсон Стэтхэм"'
-      '\n"Hopeless is when the earth falls on the lid of the coffin. The rest can be fixed. — Jason Statham"\n\n')
-print("#########\t      #       \t#       #\t#######")
-print("#        \t     # #      \t# #   # #\t#      ")
-print("#        \t    #   #     \t#  # #  #\t#######")
-print("#  ######\t   ########   \t#   #   #\t#      ")
-print("#       #\t  #        #  \t#       #\t#      ")
-print("#       #\t #          # \t#       #\t#      ")
-print("#########\t#            #\t#       #\t#######\n\n")
+GAME_OVER = "" \
+            "#########\t      #      \t#       #\t#######\n" \
+            "#        \t     # #     \t# #   # #\t#      \n" \
+            "#        \t    #   #    \t#  # #  #\t#######\n" \
+            "#  ######\t   #######   \t#   #   #\t#      \n" \
+            "#       #\t  #       #  \t#       #\t#      \n" \
+            "#       #\t #         # \t#       #\t#      \n" \
+            "#########\t#           #\t#       #\t#######\n" \
+            "" \
+            "#########\t#           #\t#########\t####### \n" \
+            "#       #\t #         # \t#        \t#      #\n" \
+            "#       #\t  #       #  \t#########\t#      #\n" \
+            "#       #\t   #     #   \t#        \t####### \n" \
+            "#       #\t    #   #    \t#        \t# #     \n" \
+            "#       #\t     # #     \t#        \t#   #   \n" \
+            "#########\t      #      \t#########\t#     # \n"
 
-print("#########\t#           #\t#######\t####### ")
-print("#       #\t #         # \t#      \t#      #")
-print("#       #\t  #       #  \t#######\t#      #")
-print("#       #\t   #     #   \t#      \t####### ")
-print("#       #\t    #   #    \t#      \t# #     ")
-print("#       #\t     # #     \t#      \t#   #   ")
-print("#########\t      #      \t#######\t#     # ")
+print('\n\n"Безнадёжно — это когда на крышку гроба падает земля. Остальное можно исправить. — Джейсон Стэтхэм"'
+      '\n"Hopeless is when the earth falls on the lid of the coffin. The rest can be fixed. — Jason Statham"\n\n {0}'.format(
+    GAME_OVER))
