@@ -1,6 +1,7 @@
 import pygame
 from pygame.locals import *
 from Research.Pygame.consts import *
+from Research.Pygame.game_over import game_over
 from Research.Pygame.keyboard_navigation import keyboard_navigation, choose_way
 from Research.Pygame.utils import rockets_creator
 
@@ -26,6 +27,7 @@ while True:
     # Draw rockets
     rockets_creator(rockets, playground)
     pygame.draw.circle(playground, BLUE, (x, y), r)  # draw circle
+    pygame.Rect((30, 30, 30, 30))
     pygame.display.update()  # This require to redraw owr figures
     for i in pygame.event.get():
         if i.type == QUIT:
@@ -41,6 +43,7 @@ while True:
     x, y, motion = choose_way(x, y, speed, motion)
     # Checking borders
     if x <= 0 - r:
+        game_over(playground)
         x = DISPLAY_SIZE
     elif x >= DISPLAY_SIZE + r:
         x = 0

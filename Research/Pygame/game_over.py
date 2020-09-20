@@ -10,4 +10,3 @@ def game_over(playground):
     text_rect.center = CENTER_POS
     playground.blit(text_surface, text_rect)
     pygame.display.update()
-    pygame.time.wait(5000)

@@ -1,7 +1,7 @@
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 BLUE = (0, 70, 225)
-GOLD = (212, 175, 55)
+GOLD = (212, 175, 55, 0.5)
 FPS = 20  # Real FPS 50 => 1000/20 = 50
 DISPLAY_SIZE = 500
 K_LEFT_UP = 'K_LEFT_UP'
