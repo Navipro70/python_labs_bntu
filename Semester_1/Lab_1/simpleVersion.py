@@ -35,22 +35,20 @@ pygame.init()
 pygame.display.set_caption('Snake')
 
 playground = pygame.display.set_mode((DISPLAY_SIZE, DISPLAY_SIZE))
-font = pygame.font.Font('roboto.ttf', 40)
-text = font.render(GAME_OVER, True, GOLD)
+font = pygame.font.Font('roboto.ttf', 82)
+text = font.render('GAME_OVER', True, GOLD, PINK)
 
-surface = pygame.Surface((240, 40))
-surface.fill((255, 255, 255))
+surface = pygame.Surface((600, 140))
 surface.blit(text, pygame.Rect(0, 0, 100, 100))
-rerenders = 0
+renders_sum = 0
 while True:
-    playground.fill(BLACK)  # After every FPS tick, redraw background to black
-    rerenders += FPS
-    surface.set_alpha(rerenders/20)
-    playground.blit(surface, pygame.Rect(0, 30, 10, 10))
+    playground.fill(PINK)  # After every FPS tick, redraw background to black
+    renders_sum += FPS
+    surface.set_alpha(renders_sum / 10)
+    playground.blit(surface, pygame.Rect(20, 180, 0, 0))
     pygame.time.delay(FPS)  # FPS imitation
     pygame.display.update()  # This require to redraw owr figures
     for i in pygame.event.get():
         if i.type == QUIT:
             pygame.quit()
             exit()
-
