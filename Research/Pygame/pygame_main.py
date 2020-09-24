@@ -20,10 +20,14 @@ speed = 1
 reverted = False
 rockets = []
 motion = K_LEFT
+can_shoot = True
+val = 0
 
 while True:
-    playground.fill(BLACK)  # After every FPS tick, redraw background to black
-    pygame.time.delay(FPS)  # FPS imitation
+    playground.fill(PINK)  # After every FPS tick, redraw background to black
+    val += pygame.time.delay(FPS)  # FPS imitation
+    if (val % 400) == 0 and not can_shoot:
+        can_shoot = True
     # Draw rockets
     rockets_creator(rockets, playground)
     pygame.draw.circle(playground, BLUE, (x, y), r)  # draw circle
@@ -35,8 +39,9 @@ while True:
             exit()
         elif i.type == KEYDOWN:
             # Rockets push
-            if i.key == K_SPACE:
+            if i.key == K_SPACE and can_shoot:
                 rockets.append([x - r/2, y - r/2])
+                can_shoot = False
 
     x, y, motion = keyboard_navigation(x, y, speed, motion)
     # Make static moving for main obj
